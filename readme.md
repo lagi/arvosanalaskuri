@@ -1,1 +1,2 @@
-ohjelma arvosanojen laskemiseen
+# Grade calculator
+A nifty tool for calculating grades in Finnish.
