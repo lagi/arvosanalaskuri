@@ -13,6 +13,14 @@ while kaynnissa:
         maxpisteet = input("Kokeen maksimipisteet: ")
     while not lapaisyprosentti.isdigit():
         lapaisyprosentti = input("Läpipääsyraja prosentteina: ")
+        #varmistetaan myös, että läpäisyprosentti on alle 100
+        if lapaisyprosentti.isdigit():
+            lapaisyprosentti = int(lapaisyprosentti)
+            if lapaisyprosentti >= 100:
+                lapaisyprosentti = "bar"
+                continue
+            else:
+                break
 
 #tehdään syötteistä kokonaisluvut laskutoimituksia varten
     maxpisteet = int(maxpisteet)
@@ -41,7 +49,7 @@ while kaynnissa:
         counter += 1
     #kun arvosana laskee kynnyksen alle, tulostetaan erotin ja hyvaksytty varmistaa, ettei tätä tehdä toiste
         if hyvaksytty and arvosana < 4.75:
-            print("-------------")
+            print("-----------")
             hyvaksytty = False
 #tulostuksen jälkeen kysytään käyttäjältä mahdolliset jatkotoimenpiteet
     komento = ""
